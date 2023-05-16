@@ -14,7 +14,7 @@ $(document).ready(function() {
             // Fetch the module options JSON synchronously (using $.ajax with async: false)
             var optionsData;
             $.ajax({
-                url: 'content/' + moduleId + 'Options.json',
+                url: 'content/' + moduleId + 'Options.json',options
                 async: false,
                 dataType: 'json',
                 success: function(data) {
@@ -22,7 +22,7 @@ $(document).ready(function() {
                 }
             });
 
-            stepHtml += '<form>';
+            stepHtml += '<form id="form_' + moduleId + '">';
             stepHtml += '<h5>' + optionsData.title + '</h5>';
 
             // Generate form fields based on the options
@@ -54,34 +54,6 @@ $(document).ready(function() {
 
         $('#moduleSteps').html(moduleStepsHtml);
 
-        var currentStep = 0;
-
-        $('#nextButton').click(function() {
-            if (currentStep < numSteps - 1) {
-                $('#step_' + selectedModules[currentStep]).hide();
-                currentStep++;
-                $('#step_' + selectedModules[currentStep]).show();
-                $('#prevButton').prop('disabled', false);
-                if (currentStep === numSteps - 1) {
-                    // Reached the last step, hide the next button and show the finish button
-                    $('#nextButton').hide();
-                    $('#finishButton').show();
-                }
-            }
-        });
-
-        $('#prevButton').click(function() {
-            if (currentStep > 0) {
-                $('#step_' + selectedModules[currentStep]).hide();
-                currentStep--;
-                $('#step_' + selectedModules[currentStep]).show();
-                $('#nextButton').show();
-                $('#finishButton').hide();
-                if (currentStep === 0) {
-                    // Reached the first step, disable the previous button
-                    $('#prevButton').prop('disabled', true);
-                }
-            }
-        });
+        // ...
     }
 });

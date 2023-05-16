@@ -1,0 +1,11 @@
+{
+  "title": "Crypto options",
+  "fields": [
+      {
+        "id": "crupto",
+        "label": "someLabel",
+        "type": "text"
+      }
+    ]
+  }
+  

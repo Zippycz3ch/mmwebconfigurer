@@ -1,0 +1,21 @@
+{
+  "title": "Weather Options",
+  "fields": [
+      {
+        "id": "weatherApiKey",
+        "label": "Open Weather API",
+        "type": "text"
+      },
+      {
+        "id": "weatherLat",
+        "label": "Latitude",
+        "type": "text"
+      },
+      {
+        "id": "weatherLon",
+        "label": "Longtitude",
+        "type": "text"
+      }
+    ]
+  }
+  

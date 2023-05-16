@@ -5,23 +5,40 @@
     <title>Modules Configuration</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="/fav/favicon.ico">
 </head>
 
 <body>
     <div class="container mt-5">
         <h2>Modules Configuration</h2>
-        <div id="selectedModulesOutput"></div>
+        <form id="modulesForm">
+            <div id="moduleSteps">
+                <!-- Steps for selected modules will be dynamically loaded here -->
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <button type="button" class="btn btn-primary" id="prevButton" disabled>Previous</button>
+                </div>
+                <div class="col text-right">
+                    <button type="button" class="btn btn-primary" id="nextButton">Next</button>
+                    <button type="button" class="btn btn-primary" id="finishButton"
+                        style="display: none;">Finish</button>
+                    <button type="button" class="btn btn-primary" id="saveButton">Save</button>
+                </div>
+            </div>
+        </form>
     </div>
 
     <!-- Custom scripts -->
+    <script src="js/modulesConfiguration.js"></script>
     <script src="js/displaySelectedModules.js"></script>
+    <script src="js/moduleSteps.js"></script>
+    <script src="js/formSubmission.js"></script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
-
-</html>
 
 </html>

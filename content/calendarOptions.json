@@ -1,0 +1,10 @@
+{
+  "title": "Calendar Options",
+  "fields": [
+    {
+      "id": "calendarUrl",
+      "label": "Calendar URL",
+      "type": "url"
+    }
+  ]
+}

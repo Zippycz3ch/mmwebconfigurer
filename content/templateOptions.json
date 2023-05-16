@@ -1,0 +1,11 @@
+{
+  "title": "Template Options",
+  "fields": [
+      {
+        "id": "someId",
+        "label": "someLabel",
+        "type": "someType"
+      }
+    ]
+  }
+  
