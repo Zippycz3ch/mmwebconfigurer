@@ -6,8 +6,8 @@ $(document).ready(function() {
         // Get the input values from the form
         $('#modulesForm :input').each(function() {
             var inputId = $(this).attr('id');
-            
-            // Check if the inputId ends with "Button" to exclude buttons from storing in local storage
+
+            // Exclude buttons from storing in localStorage
             if (!inputId.endsWith('Button')) {
                 var inputValue = $(this).val();
                 formData[inputId] = inputValue;

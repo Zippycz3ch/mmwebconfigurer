@@ -29,9 +29,9 @@ $(document).ready(function() {
             for (var j = 0; j < optionsData.fields.length; j++) {
                 var field = optionsData.fields[j];
                 stepHtml += '<div class="form-group">';
-                stepHtml += '<label for="' + moduleId + '_' + field.label + '">' + field.label + '</label>';
+                stepHtml += '<label for="' + moduleId + '_' + field.id + '">' + field.label + '</label>';
 
-                var fieldId = moduleId + '_' + field.label;
+                var fieldId = moduleId + '_' + field.id;
                 if (field.type === 'select') {
                     stepHtml += '<select class="form-control" id="' + fieldId + '">';
                     for (var k = 0; k < field.options.length; k++) {

@@ -9,18 +9,13 @@ $(document).ready(function() {
             var moduleId = selectedModules[i];
             var displayStyle = i === 0 ? '' : 'display: none;';
             var stepHtml = '<div id="step_' + moduleId + '" class="module-step" style="' + displayStyle + '">';
-            stepHtml += '<h4>' + moduleId + '</h4>';
 
-            // Fetch the module options JSON synchronously (using $.ajax with async: false)
-            var optionsData;
-            $.ajax({
-                url: 'content/' + moduleId + 'Options.json',options
+            // Fetch the module options JSON synchronously
+            var optionsData = $.ajax({
+                url: 'content/' + moduleId + 'Options.json',
                 async: false,
-                dataType: 'json',
-                success: function(data) {
-                    optionsData = data;
-                }
-            });
+                dataType: 'json'
+            }).responseJSON;
 
             stepHtml += '<form id="form_' + moduleId + '">';
             stepHtml += '<h5>' + optionsData.title + '</h5>';
