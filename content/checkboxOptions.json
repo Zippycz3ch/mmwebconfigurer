@@ -1,0 +1,8 @@
+{
+    "options": [
+      { "id": "calendar", "label": "Calendar" },
+      { "id": "weather", "label": "Weather" },
+      { "id": "crypto", "label": "Crypto" }
+    ]
+  }
+  
